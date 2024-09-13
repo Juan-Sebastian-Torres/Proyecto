@@ -1,7 +1,7 @@
 #author: Juan Sebastian Torres Rincon
 #language: es
 
-Característica: Consumo con serenity-rest el verbos GET
+Característica: Consumo con serenity-rest el verbos POST
 
   Yo como usuario
   Quiero realizar consumos a un servicio de apirest de tipo post
