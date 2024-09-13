@@ -28,6 +28,7 @@ public class Hook {
                 OpenWeb.broserURL()
         );
     }
+
     @Given("que he agregado los productos de la categoría Agradecimientos al carrito")
     public void haveAddedTheProductsOfTheCategoryThankYouToTheCart() {
         OnStage.theActorCalled(ACTOR).attemptsTo(

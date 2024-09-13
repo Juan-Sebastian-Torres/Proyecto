@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.annotations.Subject;
 
-import static co.com.apirest.project.utils.Constants.STATUS;
 import static co.com.screenplay.project.utils.Constants.STATUS;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 

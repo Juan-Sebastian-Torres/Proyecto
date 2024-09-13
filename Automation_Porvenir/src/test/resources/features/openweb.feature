@@ -1,13 +1,14 @@
+#author: Juan Sebastian Torres Rincon
 # language: es
 Característica: Gestión de productos en la categoría Agradecimientos
 
-
+  @successful
   Escenario: Productos categoría agradecimientos
     Dado que estoy en la página principal de la tienda floristeria
     Cuando selecciono la categoría Agradecimientos
     Entonces se visualizarán los productos para esta categoría
 
-
+  @successful
   Escenario: Añadir dos productos de la categoría Agradecimientos al carrito de compras
     Dado que estoy en la categoría Agradecimientos
     Cuando de clic en la opción Añadir al carrito

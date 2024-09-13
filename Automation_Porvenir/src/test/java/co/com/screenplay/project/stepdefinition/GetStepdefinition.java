@@ -15,7 +15,6 @@ import static io.restassured.parsing.Parser.JSON;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.apache.http.HttpStatus.SC_OK;
-import static sun.rmi.transport.TransportConstants.Call;
 
 public class GetStepdefinition {
 
@@ -24,8 +23,8 @@ public class GetStepdefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @When("configura la peticion a consumir")
-    public void configureRequestToConsume() {
+    @When("realizo una solicitud GET al endpoint")
+    public void iMakeAGetRequestToTheEndpoint() {
         OnStage.theActorCalled(ACTOR).attemptsTo(
                 Call.service().apiget(
                         BASE_URL.replace(TYPE_ENVIRONMENT,ENV_QA),
@@ -33,8 +32,8 @@ public class GetStepdefinition {
                         String.valueOf(JSON)));
     }
 
-    @Then("valida estado de la peticion")
-    public void validateStatusOfTheRequest() {
+    @Then("valida estado de la peticion GET")
+    public void validateStatusOfTheRequestGet() {
         theActorInTheSpotlight().should(seeThat(GetQuestion.successful(SC_OK)));
     }
 }

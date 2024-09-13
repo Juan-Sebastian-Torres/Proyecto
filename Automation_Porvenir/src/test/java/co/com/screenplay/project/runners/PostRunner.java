@@ -6,10 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/get.feature",
+        features = "src/test/resources/features/post.feature",
         glue = "co.com.screenplay.project.stepdefinition",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         tags = "@Successful"
 )
-public class GetRunner {
+
+public class PostRunner {
 }

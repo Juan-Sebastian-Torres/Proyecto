@@ -1,6 +1,6 @@
 package co.com.screenplay.project.tasks.get;
 
-import co.com.apirest.project.interactions.GetRequest;
+import co.com.screenplay.project.interactions.GetRequest;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 
