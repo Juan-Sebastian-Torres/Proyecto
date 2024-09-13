@@ -2,8 +2,8 @@
 
 Se adjunta prueba. 
 
-Primer requerimiento: se realiza la consulta desde postman con las distintas solicitudes para verirficar cada endpoint, por temas de tiempo no alcance a automatizar este requrimiento, adjunto un borrador de un GET de la estructura de como la trabajaria
+Primer requerimiento: Se realiza la automatización de este requrimiento, y se genera su respectivo reporte .index
 
 Segundo requrimiento: Se realiza la automatización de este requrimiento, y se genera su respectivo reporte .index
 
-Gracias por el reto, esta muy interesante, disculpas por las molestias. 
+Gracias por el reto, esta muy interesante y disculpas por las molestias. 
