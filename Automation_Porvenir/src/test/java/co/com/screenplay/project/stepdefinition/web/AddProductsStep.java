@@ -1,6 +1,6 @@
-package co.com.screenplay.project.stepdefinition;
 
-import co.com.screenplay.project.tasks.ChooseCarTask;
+package co.com.screenplay.project.stepdefinition.web;
+
 import co.com.screenplay.project.tasks.ChooseCategoryProductTask;
 import co.com.screenplay.project.tasks.ChooseFirstProductTask;
 import co.com.screenplay.project.tasks.ChooseSecondProductTask;
@@ -16,22 +16,23 @@ import org.hamcrest.Matchers;
 import static co.com.screenplay.project.utils.Constants.*;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-public class ProductsInCarStep {
+public class AddProductsStep {
+
     @Before
     public void setTheStage() {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @When("de clic en la opción “CARRO”")
-    public void clickOnCARTOption() {
+    @When("de clic en la opción Añadir al carrito")
+    public void clickOnOptionAddToCart() {
         OnStage.theActorCalled(ACTOR).attemptsTo(ChooseCategoryProductTask.choose());
         OnStage.theActorCalled(ACTOR).attemptsTo(ChooseFirstProductTask.choose());
         OnStage.theActorCalled(ACTOR).attemptsTo(ChooseCategoryProductTask.choose());
         OnStage.theActorCalled(ACTOR).attemptsTo(ChooseSecondProductTask.choose());
-        OnStage.theActorCalled(ACTOR).attemptsTo(ChooseCarTask.choose());
     }
-    @Then("se deberán visualizar los productos agregados")
-    public void addedProductsShouldBeDisplayed() {
+
+    @Then("el producto se agregará al carrito de compras")
+    public void theProductWillBeAddedToTheShoppingCart() {
         theActorInTheSpotlight().should(
                 GivenWhenThen.seeThat(
                         TheWebPage.title(),

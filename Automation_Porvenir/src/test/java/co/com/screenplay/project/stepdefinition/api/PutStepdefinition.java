@@ -1,4 +1,4 @@
-package co.com.screenplay.project.stepdefinition;
+package co.com.screenplay.project.stepdefinition.api;
 
 import co.com.screenplay.project.questions.PutQuestion;
 import co.com.screenplay.project.tasks.put.Call;

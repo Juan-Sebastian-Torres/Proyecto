@@ -1,4 +1,4 @@
-package co.com.screenplay.project.stepdefinition;
+package co.com.screenplay.project.stepdefinition.api;
 
 import co.com.screenplay.project.questions.GetQuestion;
 import co.com.screenplay.project.tasks.get.Call;
@@ -9,7 +9,6 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-import static co.com.screenplay.project.utils.Constants.*;
 import static co.com.screenplay.project.utils.Constants.*;
 import static io.restassured.parsing.Parser.JSON;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;

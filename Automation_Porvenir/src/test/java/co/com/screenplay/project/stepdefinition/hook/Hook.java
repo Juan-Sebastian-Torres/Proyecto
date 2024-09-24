@@ -3,11 +3,14 @@ package co.com.screenplay.project.stepdefinition.hook;
 import co.com.screenplay.project.hook.OpenWeb;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
+import lombok.extern.slf4j.Slf4j;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-import static co.com.screenplay.project.utils.Constants.ACTOR;
+import static co.com.screenplay.project.utils.Constants.*;
+import static co.com.screenplay.project.utils.Constants.ENV_QA;
 
+@Slf4j
 public class Hook {
 
     @Before
@@ -22,17 +25,13 @@ public class Hook {
         );
     }
 
-    @Given("que estoy en la categoría Agradecimientos")
-    public void imInTheCategoryThanks() {
-        OnStage.theActorCalled(ACTOR).attemptsTo(
-                OpenWeb.broserURL()
-        );
-    }
-
-    @Given("que he agregado los productos de la categoría Agradecimientos al carrito")
-    public void haveAddedTheProductsOfTheCategoryThankYouToTheCart() {
-        OnStage.theActorCalled(ACTOR).attemptsTo(
-                OpenWeb.broserURL()
+    @Given("{string} obtiene la baseurl de la api")
+    public void getTheBaseurlFromTheApi(String actor) {
+        log.info(String.format(
+                FORMAT_THREE,
+                actor,
+                CALL_SERVICE,
+                BASE_URL.replace(TYPE_ENVIRONMENT, ENV_QA))
         );
     }
 
